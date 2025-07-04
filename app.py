@@ -5,7 +5,7 @@ import tempfile
 
 st.title("🔍 Real-Time Object Detection & Tracking")
 
-source = st.radio("Choose input source:", ["Webcam", "Upload Video"])
+source = st.radio("Choose input source:", ["Upload Video"])  
 
 if source == "Upload Video":
     video_file = st.file_uploader("Upload your video", type=["mp4", "mov", "avi"])
@@ -13,8 +13,6 @@ if source == "Upload Video":
         tfile = tempfile.NamedTemporaryFile(delete=False)
         tfile.write(video_file.read())
         video_path = tfile.name
-elif source == "Webcam":
-    video_path = 0  # webcam
 
 start = st.button("Start Detection")
 
