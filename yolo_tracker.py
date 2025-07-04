@@ -1,7 +1,8 @@
 from ultralytics import YOLO
 from deep_sort_realtime.deepsort_tracker import DeepSort
 
-model = YOLO("yolov8n.pt")  # lightweight and fast
+model = YOLO("models/yolov8n.pt")  # ✅ assumes you uploaded the file to a `models/` folder
+  # lightweight and fast
 tracker = DeepSort()
 
 def detect_and_track(frame):
