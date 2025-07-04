@@ -1,3 +1,4 @@
+--no-binary opencv-python-headless
 streamlit
 opencv-python-headless==4.9.0.80
 ultralytics
